@@ -35,12 +35,12 @@
         </interface>
     </hal>
     <hal format="aidl" updatable-via-apex="true">
-         <name>android.hardware.authsecret</name>
-         <version>1</version>
-         <interface>
-             <name>IAuthSecret</name>
-             <instance>default</instance>
-         </interface>
+        <name>android.hardware.authsecret</name>
+        <version>1</version>
+        <interface>
+            <name>IAuthSecret</name>
+            <instance>default</instance>
+        </interface>
     </hal>
     <hal format="aidl">
         <name>android.hardware.automotive.audiocontrol</name>
@@ -153,7 +153,14 @@
             <name>IBluetoothFinder</name>
             <instance>default</instance>
         </interface>
-    </hal>
+    </hal><hal format="aidl" optional="true">
+    <name>android.hardware.invcase</name>
+    <version>1</version>
+    <interface>
+        <name>IInvcase</name>
+        <instance>default</instance>
+    </interface>
+</hal>
     <hal format="aidl">
         <name>android.hardware.bluetooth.lmp_event</name>
         <version>1</version>
@@ -550,12 +557,12 @@
         </interface>
     </hal>
     <hal format="aidl">
-         <name>android.hardware.soundtrigger3</name>
-         <version>1-2</version>
-         <interface>
-             <name>ISoundTriggerHw</name>
-             <instance>default</instance>
-         </interface>
+        <name>android.hardware.soundtrigger3</name>
+        <version>1-2</version>
+        <interface>
+            <name>ISoundTriggerHw</name>
+            <instance>default</instance>
+        </interface>
     </hal>
     <hal format="aidl">
         <name>android.hardware.tetheroffload</name>
@@ -706,6 +713,14 @@
         <version>5.0</version>
         <interface>
             <regex-instance>.*</regex-instance>
+        </interface>
+    </hal>
+    <hal format="aidl" optional="true">
+        <name>android.hardware.fancontroller</name>
+        <version>1</version>
+        <interface>
+            <name>IFanSpeedControlService</name>
+            <instance>default</instance>
         </interface>
     </hal>
 </compatibility-matrix>
